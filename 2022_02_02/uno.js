@@ -124,3 +124,40 @@ const person = {
   };
   objectName.methodName()
 //   name = person.fullName();
+//procedura
+function name(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+//funzione
+let x = myFunction(4, 3);   // Function is called, return value will end up in x
+
+function myFunction(a, b) {
+  return a * b;             // Function returns the product of a and b
+}
+myFunction();//risultato
+myFunction;//obj della funz
+/*
+Eventi HMTL
+Here is a list of some common HTML events:
+
+Event	Description
+onchange	An HTML element has been changed
+onclick	The user clicks an HTML element
+onmouseover	The user moves the mouse over an HTML element
+onmouseout	The user moves the mouse away from an HTML element
+onkeydown	The user pushes a keyboard key
+onload	The browser has finished loading the page
+\',\",\\ -escape char \
+*/
+
+let x = "John";
+let y = new String("John");
+let str = "Apple, Banana, Kiwi";
+let part = str.slice(-12, -6);//anche -
+let part = str.substring(7, 13);//solo +
+//let part = str.substr(7, 6);
+let text1 = "Hello World!";
+let text2 = text1.toUpperCase();
+let t3=text1.toLocaleLowerCase();
+text = "Hello" + " " + "World!";
+text = "Hello".concat(" ", "World!");
