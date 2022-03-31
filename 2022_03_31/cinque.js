@@ -1,18 +1,36 @@
-console.log('lezione 4');
-console.log('usiamo gli eventi del DOM senza ON\n con il Listener')
-function miaFunzione(){
-    alert('mouse')
-    document.body.style.backgroundColor = "lightgreen"
-  /*  btn.style.backgroundColor="blue"
-    btn.style.width = '200px'
-    btn.style.height = '300px'
-    btn.textContent="NUOVONOME"*/
-    btn.className='btn btn-dark'
-/*    btn.classList.add("shadow");
-    btn.classList.remove('');*/
+console.log('lezione 5 - OOP -TIPI- PROTOTIPI');
+//prima versione (old) è
+function utente(nome,cognome)
+{
+  let u = Object.create(utente.methods)
+  u.nome = nome
+  u.cognome = cognome
+  return u 
+}
+utente.methods = { 
+    //toString() { return "Utente: " + this.nome +" "+ this.cognome }
+    toString1: function(){},
+    toString2: ()=>{
+        return this.nome
+    },
+    hello: () => { return "Hello World!";},
+    hello2(){return "Hello 2!"}
+};
+//proviamo l'esempio
+let u1 = utente("Joseph",'Renzi')
+//console.log(u1.toString2())
+//console.log(u1)
+console.log(u1.hello2());
+
+/*due*/
+function Utente2(nome,cognome)
+{
+  this.nome = nome
+  this.cognome = cognome
+}
+Utente2.prototype={
+    toString() { return "Utente: " + this.nome +" "+ this.cognome }
 }
 
-let btn=document.querySelector('#mio_bottone')
-btn.addEventListener('mouseover',miaFunzione)
-
-//let bs=document.getElementsByTagName('button') 
+let u2= new Utente2("Joseph",'Renzi')
+console.log(u2.toString());
